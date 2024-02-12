@@ -1,0 +1,114 @@
+body
+{
+background-image: linear-gradient(#fae078, #fffae6);   
+
+}
+
+h1, h3
+{
+  text-align: center;
+  color:green;
+}
+h2, p
+{
+  margin-left: 50px;
+  color: green;
+}
+
+/* culoarea fundalului pentru selectarea indicatorilor, tarii si anului, fundal albastru, 
+"margine" interioara de 10px, marfine de 50 in stanga side 10 sus si jos, culoarea textului crem */
+
+.form-control
+{
+  background: green;
+  padding: 10px;
+  margin-left: 50px;
+  margin-top:10px;
+  margin-bottom:10px;
+  color: #fae078;
+}
+
+/* atunci cand se trece cu cursotul peste form, culoarea de fundal si culoarea scrisului devin mai deschise */
+.form-control:hover
+{
+  color: #fffae6;
+  background: rgb(101, 146, 65);
+}
+
+.form-control option
+{
+  background: green;
+  
+}
+
+/* capul de tabel este cu fundal verde si scris deschis la culoare */
+th
+{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: green;
+  color: #fffae6;
+}
+
+th:hover
+{
+
+  background-color: rgb(61, 156, 2);
+  color: #fffae6;
+
+}
+td
+{
+  text-align: center;
+}
+#btnAnimatie
+{
+  margin-left: 100px;;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: rgb(61, 156, 2) solid;
+  color: #fffae6;
+  background-color:green;
+}
+#btnAnimatie:hover
+{
+  background-color: rgb(61, 156, 2);
+}
+
+#tabel
+{
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: green solid;
+  background-color:#f9f0b1;
+}
+#gf1
+{
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: green solid;
+  background-color:#f9f0b1;
+}
+
+#chart
+{
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: green solid;
+  background-color:#f9f0b1;
+}
+
+#tooltip {
+  background: cornsilk;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="3_1084_Dumitriu_Ana_Maria.css">                      
+    <script async src="./3_1084_Dumitriu_Ana_Maria.js"></script>
+
+    <title>Proiect 3 Dumitriu Ana Maria</title>
+</head>
+<body onload="completareTitlu()">
+    <h1>Proiect 3 - Vizualizare Datelor</h1>
+    <h3>Dumitriu Ana Maria, 1084C</h3>
+    <br><br>
+
+
+    <!-- //GRAFICUL1 -->
+<!-- selectarea indicatorilor, valoarea selectata initial este PIB -->
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="selectareIndicator" name="selIndicator" onchange="selectInd()">
+                  <option selected value="PIB">PIB</option>
+                  <option value="PIB">SV</option>
+                  <option value="POP">POP</option>
+                </select>
+            </div>
+        </form>
+
+<!-- selectarea tarii, valoarea selectata initial este RO -->
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="selectareTara1" name="selTara1" onchange="selectTara1()">
+                  <option value="BE">BE</option>
+                  <option value="BG">BG</option>
+                  <option value="CZ">CZ</option>
+                  <option value="DK">DK</option>
+                  <option value="DE">DE</option>
+                  <option value="EE">EE</option>
+                  <option value="IE">IE</option>
+                  <option value="EL">EL</option>
+                  <option value="ES">ES</option>
+                  <option value="FR">FR</option>
+                  <option value="HR">HR</option>
+                  <option value="IT">IT</option>
+                  <option value="CY">CY</option>
+                  <option value="LV">LV</option>
+                  <option value="LT">LT</option>
+                  <option value="LU">LU</option>
+                  <option value="HU">HU</option>
+                  <option value="MT">MT</option>
+                  <option value="NL">NL</option>
+                  <option value="AT">AT</option>
+                  <option value="PL">PL</option>
+                  <option value="PT">PT</option>
+                  <option selected value="RO">RO</option>
+                  <option value="SI">SI</option>
+                  <option value="SK">SK</option>
+                  <option value="FI">FI</option>
+                  <option value="SE">SE</option>
+                </select>
+            </div>
+        </form>
+
+<!-- afisarea titlului pentru histograma, titlul este calculat in functia pentru titlu din fisierul .js-->
+<h2>Histograma pentru  <span id="titluHistograma"></span></h2>
+    
+      <!-- <div id="tooltip" display="none" style="position: absolute; display: none;"></div> -->
+ <!-- SVG pentru desenarea HISTOGRAMEI -->
+    <svg height="420" width="950" id="gf1"> </svg>
+
+    <br>
+<!-- afisarea titlului pentru Bubble-chart -->
+    <h2>Bubble-chart pentru anul <span id="titluChart"></span></h2>
+    <p>Fiecare cerc este o tara. Inaltimea este calculata pe baza indicatorului Populatie, razele sunt calculate pe baza indicatorului PIB.  </p>
+    <p>Nu sunt modificari considerabile in timp.</p>
+
+    <button id = "btnAnimatie" style="width: 100px"> Animatie</button>
+    <br>
+ <!-- CANVAS pentru desenarea BUBBLE-CHART-ului -->  
+    <canvas id="chart" width="950" height="420"></canvas>
+
+
+
+
+  <!-- //TABEL -->
+
+
+    <h2>Tabel pentru anul <span id="titluTabel"></span></h2>
+
+  <div class="container">
+    <form>
+        <div class="form-group">
+            <select class="form-control" id="selectareAn" name="selectareAn">
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option selected value="2018">2018</option>
+            </select>
+        </div>
+   </form> 
+  </div>
+
+  <!-- <button onclick="culoareCelulaColoanaTABEL1()">Coloareaza</button> -->
+
+  <table id="tabel">
+    <tr>
+        <th>Tara</th>
+        <th>PIB</th>
+        <th>SV</th>
+        <th>Pop</th>
+    </tr>
+         <tbody id ="corpTabel"></tbody>
+  </table>
+</body>
+</html>
